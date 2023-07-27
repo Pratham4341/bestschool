@@ -8,7 +8,7 @@ const ContactController = require('../controls/admin/ContactController')
 const route = express.Router()
 const checklogin =require('../middleware/auth')
 const SliderController = require('../controls/admin/SliderController')
-const BookController = require('../controls/admin/BookController')
+
 
 //frontcontroller route
 route.get('/',FrontController.home)
