@@ -69,8 +69,6 @@ route.get('/admin/Sliderdelete/:id',checklogin,SliderController.deleteslider)
 
 
 
-//admin/book
-route.post('/insertbook',BookController.insertbook)
 
 
 
