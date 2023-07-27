@@ -1,0 +1,62 @@
+<%-include("../header.ejs") %>
+<%-include("../sidebar.ejs") %>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- /.card start -->
+    <div class="card">
+      <div class="card-header">
+        <h3 class="card-title">View Category</h3>
+       
+      </div>
+      <!-- /.card-header -->
+      <div class="card-body mx-auto" style="width: 500px;">
+        <form action="/admin/categoryUpdate/<%= d._id %>" method="post">
+          <div class="from-group">
+            <label>Name</label>
+            <input type="text" value="<%= d.name %>" name="name" class="form-control" required>
+          </div>
+          <div class="from-group">
+            <label>Address</label>
+            <textarea class="form-control" name="address"><%= d.address %></textarea>
+          </div>
+          <div class="from-group">
+            <label>Description</label>
+            <input type="text"value="<%= d.description %>" name="description" class="form-control" required>
+          </div>
+         
+          <div class="from-group">
+            <label>Category</label>
+            <input type="text"value="<%= d.category %>" name="category" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Image</label>
+            <input type="file" name="image" class="form-control">
+        </div>
+        <img src="<%= d.image.url %>" width="100" style="border-radius: 50px;">
+        <br><br>
+         
+
+
+
+
+          <button class="btn btn-success">Update</button>
+
+        </form>
+      </div>
+     
+    </div>
+  
+    <!-- /.card -->
+    </div>
+  </div>
+  
+  
+    
+  
+
+
+
+ 
+
+  <%-include("../footer.ejs") %>

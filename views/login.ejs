@@ -1,0 +1,61 @@
+<%- include('./header.ejs') %>
+
+<section style="background-color: #6696a0; height: 700px;">
+    <div class="container text-center">
+        <div class="row text-center" >
+            <div class="col">
+                <div class="card">
+                    <% if(message1.length >0){ %>
+                        <div class="alert alert-success">
+                            <%= message1 %>
+                        </div>
+                    <% } %>
+                    <% if(message2.length >0){ %>
+                        <div class="alert alert-danger">
+                            <%= message2 %>
+                        </div>
+                    <% } %>
+                    <div class="row" style=" margin-top: 129px;">
+                        <div class="col-6"><img src="/image/usadm.webp" alt=""></div>
+                        <div class="col-6"><img src="/image/adimg.jpeg" alt="">
+                        <h4>Admin Login</h4>
+                       
+                        <!-- <form action="/verify_login" method="post" >
+                            
+                            <div class="form-group mb-4">
+                                <input type="email" class="form-control form-control-md" name="email" placeholder="Email">
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="password" class="form-control form-control-md" name="password" placeholder="Password">
+                            </div>
+                        </form>
+                        <div class="form-group text-center me-4">
+                            <button type="submit" class="btn btn-lg  form-control" style="background:#12587a ; color: white;">Log In</button>
+                        </div> -->
+
+                        <form action="/verify_login" method="post" class="pt-4">
+                            <div class="form-group mb-4">
+                                <input type="text" name="email" class="form-control form-control-lg"
+                                    placeholder="email" >
+                            </div>
+                            <div class="form-group mb-4">
+                                <input type="password" name="password" class="form-control form-control-lg"
+                                    placeholder="password" >
+                            </div>
+                            <div class="form-group text-center">
+                                <button type="submit" class="btn btn-lg btn-block form-control"
+                                    style="background: #12587a; color:#ffff;" fdprocessedid="mw0qin">Log In</button>
+                                <br>
+                            </div>
+                        </form>
+                        
+                    </div>
+                
+            </div>
+            </div>
+
+        </div>
+</div>
+</section>
+
+<%- include('./footer.ejs') %>
